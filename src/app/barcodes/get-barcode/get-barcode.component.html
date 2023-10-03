@@ -1,0 +1,71 @@
+
+<div class="container d-flex justify-content-center">
+     <table  >
+    <div class="row g-3 m-auto" id="Content" style="width:50rem" *ngFor="let data of barcode">
+       
+
+            <div class="col-lg-6"  >
+                <tr>
+                    <td>Barcode Code: </td>
+                    <td>{{data.manufactureCode+data.itemCode}}</td>
+                </tr>
+            </div>
+            
+            <div class="col-lg-6">
+                <tr>
+                    <td>Product name: </td>
+                    <td>{{data.itemName}}</td>
+                </tr>
+            </div>
+             <div class="col-lg-6">
+                <tr>
+                    <td>Manufacture : </td>
+                    <td>{{data.manufactureName}}</td>
+                </tr>
+            </div>
+            <div class="col-lg-6">
+                <tr>
+                    <td>Product Purpose: </td>
+                    <td>{{data.purpose}}</td>
+                </tr>
+            </div>
+            <div class="col-lg-6">
+                <tr>
+                    <td>Product Category: </td>
+                    <td>{{data.category}}</td>
+                </tr>
+            </div>
+            <div class="col-lg-4">
+                <tr>
+                    <td>HelpLine: </td>
+                    <td>{{data.helpLine}}</td>
+                </tr>
+            </div>
+            <div class="col-lg-4">
+                <tr>
+                    <td>Published: </td>
+                    <td>{{data.dateCreated.substr(0,10)}}</td>
+                </tr>
+            </div>
+            <div class="col-lg-4">
+                <tr>
+                    <td>Email: </td>
+                    <td>{{data.email}}</td>
+                </tr>
+            </div>
+            <div class="col-lg-4">
+                <tr>
+                    <td>website: </td>
+                    <td><a href="{{data.website}}">{{data.website}}</a></td>
+                </tr>
+            </div>
+            <div class="col-lg-12">
+                
+                <tr>
+                    <td>Postal Address: </td>
+                    <td>{{data.postalAddress}}</td>
+                </tr>
+            </div> 
+    </div>
+ </table>
+</div>

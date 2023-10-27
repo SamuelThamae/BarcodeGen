@@ -1,0 +1,18 @@
+.content{
+    display:flex;
+    width: 45rem;
+    
+    justify-content: center;
+    padding: 2rem;
+    height: 80vh;
+}
+.register{
+    margin: auto;
+    background-color: whitesmoke;
+    padding: 1rem;
+}
+.login{
+    display:flex;
+    justify-content: flex-end;
+    padding: 10px;
+}

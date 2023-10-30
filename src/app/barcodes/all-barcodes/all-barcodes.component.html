@@ -1,0 +1,53 @@
+<div class="container-fluid">
+ 
+  <div class="container " >
+    <div class="card ">
+      <div class="card-header bg-primary">
+          <a routerLink="/barcodes/addBarcode" class="btn btn-secondary">New Barcode</a>      
+      </div>
+      <div class="card-body ">
+        <div class="table-responsive">
+   <table class="table  table-hover table striped">
+        
+          <thead>
+            <tr>
+              <th >Barcode</th>
+              <th >Item</th>
+              <th >Manufacture</th>
+              <th >Purpose</th>
+              <th >Category</th>
+              <th >Website</th>
+              <th >HelpLine</th>
+              <th >Email</th>
+              <th>Published</th>
+              <th >User</th>
+              <th >Action</th>
+            </tr>
+          </thead>
+          <tbody *ngFor="let data of barcodes" >
+            <tr>
+              <td> {{data.barcode}} </td>
+              <td> {{data.itemName}} </td>
+              <td> {{data.manufactureName}} </td>
+              <td> {{data.purpose}} </td>
+              <td> {{data.category}} </td>
+              <td> {{data.website}} </td>
+              <td> {{data.helpLine}} </td>
+              <td> {{data.email}} </td>
+              <td> {{data.dateCreated.substr(0,10)}} </td>
+              <td> {{data.userID}} </td>
+              <td class="d-flex">
+                <a routerLink="/barcodes/updateBarcodes/{{data.barcode}}" class="btn btn-primary mx-1">Edit</a>
+                <a (click)="delete(data.barcode)" class="btn btn-danger mx-1">Delete</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+  
+        </div>
+       
+      </div>
+    </div>
+  </div>
+ 
+</div>

@@ -1,0 +1,137 @@
+<section class="py-5">
+    <div class="container px-4 px-lg-5 my-5">
+        <div class="row ">
+            <div class="col-md-6">
+                <img class="card-img-top mb-5 mb-md-0"
+                    src="https://dummyimage.com/600x500/dee2e6/6c757d.jpg" /></div>
+            <div class="col-md-6">
+                <nav>
+                    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                        <button class="nav-link btn btn-light active" id="nav-profile-tab" data-bs-toggle="tab"
+                            data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile"
+                            aria-selected="true">Profile</button>
+
+                        <button class="nav-link btn btn-primary" id="nav-update-tab" data-bs-toggle="tab"
+                            data-bs-target="#nav-update" type="button" role="tab" aria-controls="nav-update"
+                            aria-selected="false">Update Information</button>
+                        <button class="nav-link btn btn-primary" id="nav-password-tab" data-bs-toggle="tab"
+                            data-bs-target="#nav-password" type="button" role="tab" aria-controls="nav-password"
+                            aria-selected="false">Password</button>
+                    </div>
+                </nav>
+                <div class="tab-content" id="nav-tabContent">
+                    <div class="tab-pane fade show active" id="nav-profile" role="tabpanel"
+                        aria-labelledby="nav-profile-tab" tabindex="0">
+                        <div class="card " style="width: 100%; margin-bottom: 10px;">
+                            <div class="card-header bg-secondary text-center "
+                                style="font-size: large; font-weight: bolder;">Basic</div>
+                            <div class="card-body ">
+                                <div class="row">
+                                    <div class="col-lg-6 text-center "
+                                        style="font-weight: bold; padding-bottom: 1rem;  ">Name</div>
+                                    <div class="col-lg-6">Samuel</div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-6 text-center " style="font-weight: bold;">Surname</div>
+                                    <div class="col-lg-6">Thamae</div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-6 text-center " style="font-weight: bold;">Gender</div>
+                                    <div class="col-lg-6">Male</div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-6 text-center " style="font-weight: bold;">Ethic</div>
+                                    <div class="col-lg-6">Afican</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card " style="width: 100%; margin-bottom: 5px;">
+                            <div class="card-header bg-secondary text-center "
+                                style="font-size: large; font-weight: bolder;">Contact</div>
+                            <div class="card-body ">
+                                <div class="row">
+                                    <div class="col-lg-6 text-center "
+                                        style="font-weight: bold; padding-bottom: 1rem;  ">Cellphone</div>
+                                    <div class="col-lg-6">0670066285</div>
+                                </div>
+                                <div class="row">
+                                    <div class="row">
+                                        <div class="col-lg-6 text-center " style="font-weight: bold;">Email</div>
+                                        <div class="col-lg-6">Samuel@email.com</div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-6 text-center " style="font-weight: bold;">Address</div>
+                                        <div class="col-lg-6">3385 Chris Hani</div>
+                                    </div>
+                                    <div class="col-lg-6 text-center " style="font-weight: bold;">Town</div>
+                                    <div class="col-lg-6">Pretoria</div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="tab-pane fade" id="nav-password" role="tabpanel" aria-labelledby="nav-password-tab"
+                        tabindex="0">
+                        <div class="container p-2">
+                            <form method="post" action="" enctype="application/x-www-form-urlencoded">
+                                <div class="mb-3">
+                                    <label for="old-password" class="form-label">Old Password</label>
+                                    <input type="password" class="form-control" id="old-password" name="old-password">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="new-password" class="form-label">New Password</label>
+                                    <input type="password" class="form-control" id="new-password" name="npassword">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="confirm-password" class="form-label">confirm Password</label>
+                                    <input type="password" class="form-control" id="confirm-password" name="cpassword">
+                                </div>
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="nav-update" role="tabpanel" aria-labelledby="nav-update-tab"
+                        tabindex="0">
+                        <div class="container p-2">
+                            <form method="post" action="" enctype="application/x-www-form-urlencoded">
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <select class="form-select form-select-lg mb-3"
+                                            aria-label=".form-select-lg gender" name="gender">
+                                            <option selected>Select gender</option>
+                                            <option value="Male">Male</option>
+                                            <option value="Female">Female</option>
+                                            <option value="Other">Other</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <select class="form-select form-select-lg mb-3"
+                                            aria-label=".form-select-lg ethic" name="ethic">
+                                            <option selected>Select ethic</option>
+                                            <option value="White">White</option>
+                                            <option value="Black">Black</option>
+                                            <option value="Colored">Colored</option>
+                                            <option value="Indian">Indian</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="address" class="form-label">Address</label>
+                                    <input type="text" class="form-control" id="address" name="address">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="town" class="form-label">Town</label>
+                                    <input type="text" class="form-control" id="town">
+                                </div>
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</section>

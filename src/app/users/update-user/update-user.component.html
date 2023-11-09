@@ -1,0 +1,96 @@
+<section class="py-5">
+    <div class="container px-4 px-lg-5 my-5" *ngFor="let user of userData">
+        <div class="row ">
+            <div class="col-md-12">
+                <nav>
+                    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                        <button class="nav-link btn btn-light active" id="nav-profile-tab" data-bs-toggle="tab"
+                            data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile"
+                            aria-selected="true">Profile</button>
+
+                        
+                        <button class="nav-link btn btn-primary" id="nav-password-tab" data-bs-toggle="tab"
+                            data-bs-target="#nav-password" type="button" role="tab" aria-controls="nav-password"
+                            aria-selected="false">Password</button>
+                    </div>
+                </nav>
+                <div class="tab-content" id="nav-tabContent">
+                    <div class="tab-pane fade show active" id="nav-profile" role="tabpanel"
+                        aria-labelledby="nav-profile-tab" tabindex="0">
+                        <div class="card " style="width: 100%; margin-bottom: 10px;">
+                            <div class="card-header bg-primary text-center "
+                                style="font-size: large; font-weight: bolder;">Basic</div>
+                            <div class="card-body  ">
+                               
+                                <table class="table">
+                                  
+                                    <tbody>
+                                      <tr>
+                                        
+                                        <td><strong>Full Name: </strong></td>
+                                        <td>{{user.name+" "+user.surname}}</td>
+                                        
+                                      </tr>
+                                      <tr>
+                                        
+                                        <td><strong>Cellphone : </strong></td>
+                                        <td>{{user.cellphone}}</td>
+                                      
+                                      </tr>
+                                      <tr>
+                                        
+                                        <td><strong>Email: </strong></td>
+                                        <td>{{user.email}}</td>
+                                      
+                                      </tr>
+                                     
+                                    </tbody>
+                                  </table>
+                                
+                            </div>
+                        </div>
+                   
+                    </div>
+                    <div class="tab-pane fade" id="nav-password"role="tabpanel" aria-labelledby="nav-password-tab"
+                        tabindex="0">
+                        <div class="container">
+                            <div class="card">
+
+                                <div class="card " style="width: 100%; margin-bottom: 10px;">
+                                    <div class="card-header bg-primary text-center "
+                                        style="font-size: large; font-weight: bolder;">Password</div>
+                                    <div class="card-body">
+                                        <form [(ngModel)]="updatePassword" (ngSubmit)="submitPassword()" >
+                             
+                                            <input type="email" [(ngModel)]="updatePassword.email" hidden class="form-control" name="email" >
+                                        
+                                        <div class="mb-3">
+                                            <label for="old-password" class="form-label">Current Password</label>
+                                            <input type="password"[(ngModel)]="updatePassword.currentPass" name="cueentPass" class="form-control" id="old-password" value="">
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-6">
+                                            <label for="new-password" class="form-label">New Password</label>
+                                            <input type="password"[(ngModel)]="updatePassword.newPass" class="form-control" id="new-password" name="newPass">
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <label for="confirm-password" class="form-label">confirm Password</label>
+                                            <input type="password" [(ngModel)]="updatePassword.confirmPass" class="form-control" id="confirm-password" name="confirmPass">
+                                        </div>
+                                        </div>
+                                        
+                                        <button type="submit" class="btn btn-primary">Submit</button>
+                                    </form>
+                                    </div>
+                            </div>
+                           </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</section>

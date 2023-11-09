@@ -1,0 +1,32 @@
+<!-- Contact Start -->
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-lg-7 wow fadeInUp">
+            <p class="text-center mb-4">Leave your enquiry below!</p>
+            <form  >
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <input type="text" class="form-control" name="fullName" [(ngModel)]="mail.fullName" placeholder="Your Name"> 
+                    </div>
+                    <div class="col-md-6">
+                            <input type="email" class="form-control" name="email" [(ngModel)]="mail.email" placeholder="Your Email">
+                    </div>
+                    <div class="col-12">
+                     
+                            <input type="text" class="form-control" name="subject" [(ngModel)]="mail.subject" placeholder="Subject">
+                           
+                    </div>
+                    <div class="col-12">
+                        
+                            <textarea class="form-control " placeholder="Leave a message here" [(ngModel)]="mail.message" name="message"
+                                style="height: 150px;resize:none"></textarea>
+                          
+                    </div>
+                    <div class="col-12">
+                        <button class="btn btn-primary w-100 py-3" (click)="sendMail()" type="submit">Send Message</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

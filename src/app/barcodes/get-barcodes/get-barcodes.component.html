@@ -1,0 +1,38 @@
+<div class="container d-flex flex-wrap-wrap "   >
+
+    <div class="card m-2"  *ngFor="let result of barcodes" style="width:13rem">
+        <div class="card-header bg-primary" >
+          <h3 class="text-center">{{result.barcode}}</h3>
+        </div>
+        <div class="card-body">
+          <table>
+            <tr>
+                <td>
+                     Product Name:
+                </td>
+                <td class="text-center text-bold ">
+                    {{result.itemName}}
+                </td>
+
+            </tr>
+             <tr>
+                <td>
+                     Manufacture:
+                </td>
+                <td class="text-center text-bold ">
+                    {{result.manufactureName}}
+                </td>
+
+            </tr>
+             
+           
+        </table>
+        <a routerLink="/barcodes/getBarcodes/{{result.barcode}}" class="col-lg-12 mx-2 btn btn-primary">
+          view</a>
+            
+        </div>
+      </div>
+  
+     
+
+</div>

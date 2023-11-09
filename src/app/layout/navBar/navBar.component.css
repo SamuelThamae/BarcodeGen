@@ -1,0 +1,140 @@
+*{
+    text-decoration: none;
+    list-style: none;
+    transition: all 0.3s ease-in-out;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+@media (max-width:390px){
+   
+    .top-nav{
+        width: 100%;
+        
+       
+        display: flex;
+        flex-direction: column;
+    }
+   
+     ul{
+        padding: .5rem;
+        color:whitesmoke;
+        font-weight: bold;
+        font-family: Arial,sans-serif;
+        
+        width: 300px;
+       
+    }
+    
+    
+}
+@media (max-width:767px) {
+
+    .top-nav{
+        display: flex;
+        justify-content: space-between;
+        padding: 5px;
+        width:100%;
+        overflow-y: none;
+
+    }
+     ul{
+        padding: .5rem;
+        color:whitesmoke;
+        font-weight: bold;
+        font-family: Arial,sans-serif;
+        margin-right:1rem ;
+        width: 300px;
+        display: flex;
+       /* justify-content: space-around;*/
+    }
+   
+     ul li a{
+       
+        color: whitesmoke;
+        border: 2px solid rgb(236, 240, 7);
+        padding: 5px;
+        border-radius: 10px 0 10px 0;
+       
+    }
+    
+}
+
+@media (max-width:490px) {
+    #menu{
+        display: block;
+    }
+    .top-nav{
+        display: flex;
+        justify-content: space-between;
+        padding: 5px;
+        width:100%;
+        overflow-y: none;
+
+    }
+     ul{
+        padding: .5rem;
+        color:whitesmoke;
+        font-weight: bold;
+        font-family: Arial,sans-serif;
+        margin-right:1rem ;
+        width: 300px;
+        display: flex;
+        justify-content: flex-end;
+    }
+   
+     ul li a{
+       
+        color: whitesmoke;
+        border: 2px solid rgb(236, 240, 7);
+        padding: 5px;
+        border-radius: 10px 0 10px 0;
+       
+    }
+    
+}
+
+@media(min-width:768px){
+   
+    .top-nav{
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+        width:100%;
+        overflow-y: none;
+    
+    }
+    .nav-link{
+        padding: 1rem;
+        color:whitesmoke;
+        font-weight: bold;
+        font-family: Arial,sans-serif;
+        margin-right:2rem ;
+    }
+    
+     ul {
+       
+        width: 400px;
+        display: flex;
+        justify-content: flex-end;
+      
+    }
+    
+     ul li a{
+        color: whitesmoke;
+        border: 2px solid rgb(236, 240, 7);
+        padding: 10px;
+        border-radius: 10px 0 10px 0; 
+         margin-right:1rem ;
+    }
+     ul li a:hover{
+        color: rgb(0, 0, 255);
+        padding: 10px;
+        background-color: whitesmoke;
+        border-radius: 10px 0 10px 0;
+    }
+}
+
+
+
+

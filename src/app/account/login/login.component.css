@@ -1,0 +1,22 @@
+.login{
+    margin: auto;
+    background-color: whitesmoke;
+    padding: 1rem;
+    width: 30rem;
+}
+.container{
+    display:flex;
+    width: 45rem;
+    
+    justify-content: center;
+    padding: 2rem;
+    height: 80vh;
+}
+.register{
+    display:flex;
+    justify-content: flex-end;
+    padding: 12px;
+    text-decoration: none;
+    font-weight: 400;
+    
+}

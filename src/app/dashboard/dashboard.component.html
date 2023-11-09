@@ -1,0 +1,99 @@
+<div class="row py-3">
+  <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6" style="width:12rem">
+    <div class="card card-barcodes border-success">
+      <div class="card-header card-header-warning card-header-icon">
+        <p class="card-category">Barcodes</p>
+        <h3 class="card-title">
+         {{data?.items}}
+          <small>items</small>
+        </h3>
+      </div>
+    </div>
+  </div>
+  <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6" style="width:12rem">
+    <div class="card card-manufacture border-warning">
+      <div class="card-header card-header-warning card-header-icon">
+        <p class="card-category">Company</p>
+        <h3 class="card-title">
+          {{data?.manufecture}}
+          <small>companies</small>
+        </h3>
+      </div>
+    </div>
+  </div>
+  <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6" style="width:12rem">
+    <div class="card card-category border-dark ">
+      <div class="card-header card-header-warning card-header-icon">
+        <p class="card-category">Category</p>
+        <h3 class="card-title">
+         {{data?.category}}
+          <small>categories</small>
+        </h3>
+      </div>
+    </div>
+  </div>
+  <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6" style="width:12rem">
+    <div class="card card-users border-danger">
+      <div class="card-header card-header-warning card-header-icon">
+        <p class="card-category">Users </p>
+        <h3 class="card-title">
+          {{data?.user}}
+          <small>users</small>
+        </h3>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-lg-8 col-md-12">
+    <div class="card">
+      <div class="card-header card-header-primary">
+        <h4 class="card-title">Waiting for Approval</h4>
+        <p class="card-category">New Users on 15th September, 2016</p>
+      </div>
+      <div class="card-body table-responsive">
+        <table class="table table-hover">
+          <thead class="text-warning">
+            <th>Full Name</th>
+            <th>Email</th>
+            <th>Status</th>
+            <th>Action</th>
+          </thead>
+          <tbody  *ngFor="let data of approval">
+            
+            <tr >
+              
+              <td>{{data.fullName}}</td>
+              <td>{{data.email}}</td>
+              <td>{{data.status}}</td>
+           <td><a routerLink="/users/show" class="btn btn-primary">Approve</a></td>
+            
+            
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-4 col-md-12">
+    <div class="card">
+      <div class="card-header card-header-tabs card-header-warning">
+        <h2 class="text-center">Categories</h2>
+      </div>
+      <div class="card-body py-0">
+
+           <table class="table">
+          <tbody>
+            <tr *ngFor="let category of catList" >
+              <td>{{category.id}} </td>
+              <td>{{category.name}}</td>
+            </tr>
+ 
+          </tbody>
+        </table>
+        
+        
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,45 @@
+
+<div class="container d-flex justify-content-center">
+ 
+    <form   class="row g-3 m-auto" style="width:35rem" [(ngModel)]="updateBarcode" (ngSubmit)="updateData()" >
+      <div class="col-lg-12">
+        <input type="text" class="form-control" [(ngModel)]="updateBarcode.barcode" name="barcode" readonly >
+      </div>
+      <div class="col-lg-6">
+        <input type="text" class="form-control" [(ngModel)]="updateBarcode.name"  name="name" >
+      </div>
+      <div class="col-lg-6">
+        <input type="text" class="form-control" name="manufactureName" [(ngModel)]="updateBarcode.manufactureName" >
+      </div>
+      <div class="col-lg-6">
+        <input type="text" class="form-control"  [(ngModel)]="updateBarcode.purpose" name="purpose" >
+      </div>
+      <div class="col-lg-6" readonly>
+        <select [(ngModel)]="updateBarcode.category" name="category" class="form-select" >
+          <option selected disabled>Choose...</option>
+          <option *ngFor="let category of catList"  value="{{category}}" >{{category}}</option>
+        </select> 
+      </div>
+      <div class="col-lg-6">
+        <input type="tel" class="form-control"  [(ngModel)]="updateBarcode.helpLine" name="helpLine" >
+      </div>
+      
+      <div class="col-lg-6">
+        <input type="text" class="form-control" [(ngModel)]="updateBarcode.email" name="email"  >
+      </div>
+      <div class="col-lg-12">
+        <input type="text" class="form-control" name="website"  [(ngModel)]="updateBarcode.website"  >
+      </div>
+      <div class="col-lg-12 ">
+        <input class="form-control" name="postal" [(ngModel)]="updateBarcode.postal">
+       
+      </div>
+      <div class="row my-3">
+        <div class="col-lg-12">
+        <button type="submit" class="btn btn-primary" >Submit Product</button>
+      </div>
+      </div>
+      
+    </form>
+</div>
+

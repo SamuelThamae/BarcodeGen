@@ -1,0 +1,21 @@
+
+<div class="container d-flex">
+    <form [formGroup]="addCat" (ngSubmit)="createCat()" >
+        <table>
+            <tbody>
+                
+                <tr>
+                    <td>Category name: </td>
+                    <td><input type="text" formControlName="name" ></td>
+                </tr>
+                
+                <tr>
+                    <td><button type="submit" class="btn btn-primary">Create</button></td>
+                </tr>
+            </tbody>
+        </table>
+     
+       
+        
+    </form>
+</div>

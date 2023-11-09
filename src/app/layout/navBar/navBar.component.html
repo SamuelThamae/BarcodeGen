@@ -1,0 +1,43 @@
+
+
+<nav *ngIf="authService.isLoggedIn$ | async "   class="navbar navbar-expand-lg navbar-primary ">
+    <!-- Container wrapper -->
+    <div class="container-fluid">
+   
+  
+ 
+      <div class="collapse navbar-collapse" >
+        <!-- Navbar brand -->
+        <a class="navbar-brand mt-2 mt-lg-0"  routerLink="/home"><span class="text-primary">Barcode</span> <span class="text-dark">Gen</span></a>
+        <button *ngIf="(authService.isAdmin$ | async) as isAdmin" class="btn btn-primary" id="manu" type="button" data-bs-toggle="offcanvas" data-bs-target="#slider">
+                <i class='bx bx-menu-alt-left '></i>
+            </button>
+      </div>
+   
+  
+     
+      <div class="d-flex align-items-center">
+        <div class="links">
+            <ul>
+              <li class="nav-item">
+                <a  class="nav-link" href="/home">Home</a>
+              </li>
+              <li class="nav-item">
+                <a  class="nav-link" href="/barcodes/addBarcode">Create</a>
+              </li>
+              <li class="nav-item">
+                <a  class="nav-link" href="/users/profile">Profile</a>
+              </li>
+              <li class="nav-item">
+                <a  id="logout" class="nav-link" (click)="logout()">logout</a>
+              </li> 
+            </ul>
+        </div>
+          
+     
+          
+      </div>
+      
+    </div>
+ 
+  </nav>

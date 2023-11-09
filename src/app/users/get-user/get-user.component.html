@@ -1,0 +1,66 @@
+<section class="py-5">
+    <div class="container px-4  px-lg-5 my-5" style="width: 600px;">
+        <div class="row g-3 gx-lg-5" style="width: 600px;" >
+            <div class="col-12" style="width: 600px;">
+                <form (ngSubmit)="edit()">
+                    <table class="table"  >
+                        <tbody>
+                            <tr>
+                                <td class="col-4">Full Name</td>
+                                <td class="col-8">
+                                    <div class="form-group">
+                                        <input class="form-control" type="text"  name="name" readonly [(ngModel)]="editUser.fullName">
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="col-4">Mail</td>
+                                <td class="col-8">
+                                    <div class="form-group">
+                                        <input class="form-control" type="text" name="email" readonly [(ngModel)]="editUser.email">
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="col-4">Cellphone</td>
+                                <td class="col-8">
+                                    <div class="form-group">
+                                        <input class="form-control" type="text" name="cellphone" readonly [(ngModel)]="editUser.cellphone">
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="col-4">Status</td>
+                                <td class="col-8">
+                                    <div class="form-group">
+                                        <select name="status" [(ngModel)]="editUser.status"  name="status" class="form-select"  >
+                                            <option value="" disabled>...</option>
+                                            <option value="Pending">Pending</option>
+                                            <option value="Active">Active</option>
+                                            <option value="Blocked">Blocked</option>
+                                        </select>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="col-4">Role</td>
+                                <td class="col-8">
+                                    <div class="form-group">
+                                        <select name="role" [(ngModel)]="editUser.role" class="form-select">
+                                            <option value="" disabled>...</option>
+                                            <option value="user">User</option>
+                                            <option value="moderator">Moderator</option>
+                                            <option value="admin">Admin</option>
+                                        </select>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <button type="submit" class="btn btn-primary col-12">Submit</button>
+                    
+                </form>
+            </div>
+        </div>
+    </div>
+</section>

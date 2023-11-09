@@ -1,0 +1,36 @@
+<section class="mb-2">
+  <div class="container px-4 px-lg-5 my-1">
+   
+         
+            <div class="card" style="width: 18rem;">
+              <div class="card-header bg-primary">
+                <a routerLink="/category/add-category" class="btn btn-secondary text-white">Add</a>
+              </div>
+              <div class="card-body" >
+                <div class="table">
+                  <table>
+                    <thead>
+                      <th>Id</th>
+                      <th>Name</th>
+                      <th>Action</th>
+                    </thead>
+                    <tbody>
+                      <tr *ngFor="let category of catList" >
+                        <td>{{category.id}} </td>
+                        <td>{{category.name}}</td>
+                        <td class="d-flex">
+                          <a class="btn btn-info" routerLink="update-category/{{category.id}}">Edit</a>
+                          <button class="btn btn-danger" (click)=deleteItem(category.id)>Delete</button>
+                          
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  
+                </div>
+              </div>
+            </div>
+         
+      
+  </div>
+</section>

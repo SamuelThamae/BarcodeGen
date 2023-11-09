@@ -1,0 +1,46 @@
+<div class="container">
+    <div class="card">
+        <div class="card-header bg-primary">
+          Activities
+        </div>
+        <div class="card-body">
+            <div class="table table-responsive">
+                <table class="table table-striped table-hover">
+                    <thead>
+                        <tr>
+                            <th class="col">Product</th>
+                            <th class="col">Manufacture Code</th>
+                            <th class="col">Product Code</th>
+                            <th class="col">Purpose</th>
+                            <th class="col">Category</th>
+                            <th class="col">HelpLine</th>
+                            <th class="col">Website</th>
+                            <th class="col">Postal Address</th>
+                            <th class="col">Country</th>
+                          
+                            <th class="col">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let result of actData">
+                            
+                            <td class="col">{{result.itemName}}</td>
+                            <td class="col">{{result.manufactureCode}}</td>
+                            <td class="col">{{result.itemCode}}</td>
+                            <td class="col">{{result.purpose}}</td>
+                            <td class="col">{{result.category}}</td>
+                            <td class="col">{{result.helpLine}}</td>
+                            <td class="col">{{result.website}}</td>
+                            <td class="col">{{result.postalAddress}}</td>
+                          
+                            <td class="col">{{result.status}}</td>
+                            <td>
+                                
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+      </div>
+</div>

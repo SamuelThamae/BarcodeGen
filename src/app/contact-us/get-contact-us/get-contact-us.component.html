@@ -1,0 +1,15 @@
+<div class="container d-flex flex-direction flex-wrap-wrap g-3">
+    <div class="card text-center border-primary  m-2" style="width:15rem" *ngFor="let msg of messages">
+        <div class="card-header">
+           Subject: {{msg.subject}}
+        </div>
+        <div class="card-body">
+          <h5 class="card-title placeholder-glow">From: {{msg.name}}</h5>
+          <p class="card-text">{{msg.message}}</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+        <div class="card-footer text-muted">
+          {{msg.dateCreated.substr(0,10)+ ' ' +msg.dateCreated.substr(11,8)}}
+        </div>
+      </div> 
+</div>
